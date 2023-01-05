@@ -16,20 +16,15 @@ def search(size, x,y):
     if size >2:   
         if (x < size//2) and (y < size//2) :
             order += 0
-            print("ss")
             search(size//2,0,0)
         elif (x < size//2) and (y >= size//2) :
             order += 4*(2**N-1)
-            print("sw")
             search(size//2,0,size//2)
         elif (x >= size//2) and (y < size//2) :
             order += 4*(2**N-1) * 2
-            print("sq")
             search(size//2,size//2,0)
         elif (x >= size//2) and (y >= size//2) :
             order += 4*((size//2))* 3
-            print("spp")
-            print(order)
             search(size//2,size//2,size//2)
     else:
         for i in range(len(standard)):
